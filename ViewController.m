@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *fb1 = [NSURL URLWithString:@"https://www.facebook.com"];
+    NSURL *fb1 = [NSURL URLWithString:@"urlString"];
 
     NSURLRequest *fb1Request = [NSURLRequest requestWithURL:fb1];
 
