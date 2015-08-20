@@ -7,7 +7,7 @@
 //
 
 #import "ChoiceViewController.h"
-#import "ViewController.h"
+#import "WebViewController.h"
 
 @interface ChoiceViewController ()
 
@@ -32,7 +32,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ViewController *viewController = segue.destinationViewController;
+    WebViewController *viewController = segue.destinationViewController;
 
     if ([[segue identifier] isEqualToString:@"facebookOne"]) {
         viewController.urlString =  @"https://www.facebook.com/login";

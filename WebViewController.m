@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Robert Shepperd. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WebViewController.h"
 
-@interface ViewController ()
+@interface WebViewController ()
 
 
 
 @end
 
-@implementation ViewController
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
