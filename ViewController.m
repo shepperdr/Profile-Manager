@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
@@ -17,11 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *fb1 = [NSURL URLWithString:@"urlString"];
+    NSURL *url = [NSURL URLWithString:@"urlString"];
 
-    NSURLRequest *fb1Request = [NSURLRequest requestWithURL:fb1];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 
-    [_webView loadRequest:fb1Request];
+    [_webView loadRequest:urlRequest];
 
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -31,13 +33,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction) fb2ButtonPressed:(id)sender {
+
   
 
 
     
   
     
-}
+
 
 @end

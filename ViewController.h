@@ -13,7 +13,7 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-
+@property (strong, nonatomic) NSString *urlString;
 
 @end
 
