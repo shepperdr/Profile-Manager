@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import "ChoiceViewController.h"
 
 @interface WebViewController ()
 
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *url = [NSURL URLWithString:@"urlString"];
+    NSURL *url = [NSURL URLWithString:self.urlString];
 
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 
@@ -33,6 +34,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
   
 

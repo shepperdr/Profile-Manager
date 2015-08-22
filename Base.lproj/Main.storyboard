@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="1145" y="607"/>
         </scene>
-        <!--ChoosePlatformViewController-->
+        <!--Choose Your Profile-->
         <scene sceneID="N71-SB-9bW">
             <objects>
-                <viewController title="ChoosePlatformViewController" id="KOh-M8-bjD" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController title="Choose Your Profile" id="KOh-M8-bjD" customClass="ChoiceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rWP-Kj-UU9"/>
                         <viewControllerLayoutGuide type="bottom" id="Z7i-3b-i67"/>
@@ -118,10 +118,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-A6-zch">
                                 <rect key="frame" x="100" y="210" width="95" height="30"/>
                                 <state key="normal" title="FBProfile 1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ra4-aI-XHq" kind="show" id="EAg-ve-vTk"/>
+                                    <segue destination="ra4-aI-XHq" kind="show" identifier="facebookOne" id="EAg-ve-vTk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-9S-wWz">
@@ -130,22 +131,11 @@
                                     <constraint firstAttribute="width" constant="84" id="bso-kR-IGp"/>
                                 </constraints>
                                 <state key="normal" title="TProfile 1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ra4-aI-XHq" kind="show" id="BT7-SN-I87"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-qK-1HO">
-                                <rect key="frame" x="225" y="294" width="81" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="okl-9v-bjx"/>
-                                </constraints>
-                                <state key="normal" title="TProfile 2 ">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ra4-aI-XHq" kind="show" id="ir7-cp-9tV"/>
+                                    <segue destination="ra4-aI-XHq" kind="show" identifier="twitterOne" id="BT7-SN-I87"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-uL-pUV">
@@ -154,14 +144,28 @@
                                     <constraint firstAttribute="width" constant="86" id="QmG-VW-d13"/>
                                 </constraints>
                                 <state key="normal" title="Yahoo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ra4-aI-XHq" kind="show" id="OZ9-ja-W3s"/>
+                                    <segue destination="ra4-aI-XHq" kind="show" identifier="facebookTwo" id="OZ9-ja-W3s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-qK-1HO">
+                                <rect key="frame" x="225" y="294" width="81" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="okl-9v-bjx"/>
+                                </constraints>
+                                <state key="normal" title="TProfile 2 ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ra4-aI-XHq" kind="show" identifier="twitterTwo" id="ir7-cp-9tV"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="U5e-uL-pUV" firstAttribute="leading" secondItem="Yte-A6-zch" secondAttribute="trailing" constant="30" id="5eY-6g-e7w"/>
                             <constraint firstItem="p5h-qK-1HO" firstAttribute="leading" secondItem="bfe-9S-wWz" secondAttribute="trailing" constant="41" id="6Ha-js-qFi"/>
@@ -179,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="1849" y="607"/>
         </scene>
-        <!--ViewController-->
+        <!--Profile Manager-->
         <scene sceneID="SWl-tS-asX">
             <objects>
-                <viewController title="ViewController" id="ra4-aI-XHq" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController title="Profile Manager" id="ra4-aI-XHq" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NZG-Js-9f5"/>
                         <viewControllerLayoutGuide type="bottom" id="KBb-IK-yVV"/>
@@ -274,9 +278,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QA8-bm-fyw">
                                 <rect key="frame" x="250" y="285" width="101" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="mfo-GB-PTK"/>
+                                    <constraint firstAttribute="width" constant="101" id="drU-ad-ufZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <state key="normal" title="Create!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -284,28 +290,31 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJZ-8d-i0z">
-                                <rect key="frame" x="145" y="192" width="97" height="30"/>
+                                <rect key="frame" x="219" y="191" width="163" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="Eat-tQ-gqX"/>
+                                    <constraint firstAttribute="width" constant="163" id="tE1-Di-A34"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzc-Ce-W2b">
-                                <rect key="frame" x="145" y="233" width="97" height="30"/>
+                                <rect key="frame" x="252" y="232" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="8Qp-Rr-eLM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="IJZ-8d-i0z" firstAttribute="trailing" secondItem="Kzc-Ce-W2b" secondAttribute="trailing" id="6at-U7-B2T"/>
-                            <constraint firstItem="QA8-bm-fyw" firstAttribute="centerX" secondItem="pWt-Mz-8Qo" secondAttribute="centerX" id="7b6-Au-S62"/>
-                            <constraint firstItem="Kzc-Ce-W2b" firstAttribute="top" secondItem="IJZ-8d-i0z" secondAttribute="bottom" constant="11" id="VmY-pp-O8y"/>
-                            <constraint firstItem="QA8-bm-fyw" firstAttribute="centerY" secondItem="pWt-Mz-8Qo" secondAttribute="centerY" id="WSa-hQ-RXp"/>
-                            <constraint firstItem="Kzc-Ce-W2b" firstAttribute="leading" secondItem="IJZ-8d-i0z" secondAttribute="leading" id="kmy-lj-dcW"/>
-                            <constraint firstItem="IJZ-8d-i0z" firstAttribute="top" secondItem="Sto-fa-zHg" secondAttribute="bottom" constant="128" id="ol7-aq-hdg"/>
-                            <constraint firstItem="IJZ-8d-i0z" firstAttribute="leading" secondItem="pWt-Mz-8Qo" secondAttribute="leading" constant="145" id="zRe-N2-AUf"/>
+                            <constraint firstItem="QA8-bm-fyw" firstAttribute="top" secondItem="Kzc-Ce-W2b" secondAttribute="bottom" constant="23" id="5wc-Fb-r3s"/>
+                            <constraint firstItem="tg8-6m-1aN" firstAttribute="top" secondItem="QA8-bm-fyw" secondAttribute="bottom" constant="285" id="6jT-Ef-imX"/>
+                            <constraint firstItem="QA8-bm-fyw" firstAttribute="centerX" secondItem="Kzc-Ce-W2b" secondAttribute="centerX" id="6ne-7b-9Mx"/>
+                            <constraint firstItem="QA8-bm-fyw" firstAttribute="centerX" secondItem="pWt-Mz-8Qo" secondAttribute="centerX" id="J8d-I1-vWA"/>
+                            <constraint firstItem="QA8-bm-fyw" firstAttribute="centerY" secondItem="pWt-Mz-8Qo" secondAttribute="centerY" id="bN0-Us-ilk"/>
+                            <constraint firstItem="Kzc-Ce-W2b" firstAttribute="centerX" secondItem="IJZ-8d-i0z" secondAttribute="centerX" id="fZJ-tG-Mr2"/>
+                            <constraint firstItem="Kzc-Ce-W2b" firstAttribute="top" secondItem="IJZ-8d-i0z" secondAttribute="bottom" constant="11" id="qNO-Zz-cMf"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -319,6 +328,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="R4r-eG-bjj"/>
-        <segue reference="ir7-cp-9tV"/>
+        <segue reference="BT7-SN-I87"/>
     </inferredMetricsTieBreakers>
 </document>

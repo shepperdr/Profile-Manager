@@ -11,7 +11,7 @@
 
 @interface ChoiceViewController ()
 
-@property (nonatomic, strong) NSString *urlStringPicked;
+
 
 @end
 
@@ -32,6 +32,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+   
     WebViewController *viewController = segue.destinationViewController;
 
     if ([[segue identifier] isEqualToString:@"facebookOne"]) {
@@ -47,7 +48,7 @@
         viewController.urlString = @"https://nfl.com";
     }
 
-
+  
 
 
 }
