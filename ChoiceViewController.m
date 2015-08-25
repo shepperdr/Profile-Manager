@@ -42,6 +42,8 @@
     SafariViewContoller *svc = [[SafariViewContoller alloc]initWithURL:url];
     [self presentViewController:svc animated:YES completion:nil];
     svc.delegate = self;
+    NSLog(@"FB2");
+    
 }
 - (IBAction)twitterOne:(id)sender {
     
@@ -49,6 +51,7 @@
     SafariViewContoller *svc = [[SafariViewContoller alloc]initWithURL:url];
     [self presentViewController:svc animated:YES completion:nil];
     svc.delegate = self;
+    NSLog(@"Twit1");
 }
 
 - (IBAction)twitterTwo:(id)sender {
@@ -57,49 +60,21 @@
     SafariViewContoller *svc = [[SafariViewContoller alloc]initWithURL:url];
     [self presentViewController:svc animated:YES completion:nil];
     svc.delegate = self;
+    NSLog(@"Twit2");
+    
 }
 
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
-//    SFSafariViewController *viewController = segue.destinationViewController;
-//
-//    if ([[segue identifier] isEqualToString:@"facebookOne"]) {
-////        viewController.urlString =  @"https://www.facebook.com/login";
-//        NSURL *url = [NSURL URLWithString:@"https://www.facebook.com"];
-//        SafariViewContoller *svc = [[SafariViewContoller alloc]initWithURL:url];
-//        [self presentViewController:svc animated:YES completion:nil]
-//        svc.delegate = self;
-//        
-//        
-//        NSLog(@"FB1");
-//        
-//    }
 }
-//    else if ([[segue identifier]isEqualToString:@"facebookTwo"]) {
-//        viewController.urlString = @"https://www.facebook.com";
-//        
-//        NSLog(@"FB2");
-//    
-//    } else if ([[segue identifier] isEqualToString:@"twitterOne"]) {
-//       viewController.urlString = @"https://twitter.com";
-//        
-//        NSLog(@"Titter1");
-//        
-//    } else if ([[segue identifier] isEqualToString:@"twitterTwo"]) {
-//        viewController.urlString = @"https://nfl.com";
-//        
-//        NSLog(@"Twitter2");
-//        
-//    }
-//
-//  
-//
-//
-//}
 
 
 @end
