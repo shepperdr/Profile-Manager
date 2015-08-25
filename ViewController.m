@@ -6,29 +6,23 @@
 //  Copyright (c) 2015 Robert Shepperd. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "ViewController.h"
 #import "ChoiceViewController.h"
 
-@interface WebViewController ()
+@interface ViewController ()
 
 
 
 @end
 
-@implementation WebViewController
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *url = [NSURL URLWithString:self.urlString];
 
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-
-    [_webView loadRequest:urlRequest];
-
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

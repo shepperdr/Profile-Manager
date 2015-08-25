@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Robert Shepperd. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface LoginViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

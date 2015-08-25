@@ -1,5 +1,5 @@
 //
-//  ChoiceViewController.h
+//  LoginViewController.h
 //  ProfileManager
 //
 //  Created by Robert Shepperd on 8/11/15.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@import SafariServices;
+
+@interface SignUpViewController : UIViewController
 
 
-@interface ChoiceViewController : UIViewController
-@property (strong, nonatomic) NSString *urlString;
 
 @end
