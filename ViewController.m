@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "ChoiceViewController.h"
+#define NUMBERS_ONLY @"1234567890"
+#define CHARACTER_LIMIT 4
 
 @interface ViewController ()<UITextFieldDelegate>
 
@@ -42,10 +44,17 @@
     
     self.passwordTextField.delegate = self;
     [passwordTextField resignFirstResponder];
-    
+      
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)passwordTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string  {
+
+    NSUInteger newLength = [passwordTextField.text length] + [string length] - range.length;
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS_ONLY] invertedSet];
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    return (([string isEqualToString:filtered])&&(newLength <= CHARACTER_LIMIT));
+}
 
 
 

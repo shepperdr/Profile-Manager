@@ -16,9 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *login;
 
 
-//- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField;
 - (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField;
-
 
 @end
 
