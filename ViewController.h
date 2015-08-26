@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *signUp;
 @property (weak, nonatomic) IBOutlet UIButton *login;
-@property (weak, nonatomic) NSString *otherButtonTitles;
+
+
+//- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField;
+- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField;
+
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import "SignUpViewController.h"
 
-@interface SignUpViewController ()
+@interface SignUpViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -18,6 +18,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)signUpButton:(id)sender {
+    
+    if ([_emailTextField.text isEqualToString:@""] || [_passwordTextField.text isEqualToString:@""]) {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"You must fill all required fields" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK!" style:UIAlertActionStyleDestructive handler:nil]];
+        {
+            [self signupButton];
+            [self.navigationController popToViewController:self animated:YES];
+        };
+        
+        [self.navigationController presentViewController:alert animated:YES completion:nil];
+        
+        
+    }
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField
+{
+    
+    self.passwordTextField.delegate = self;
+    [passwordTextField resignFirstResponder];
+    
+    return YES;
+}
+
+
+
+    
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

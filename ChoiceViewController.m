@@ -9,6 +9,7 @@
 #import "ChoiceViewController.h"
 #import "ViewController.h"
 #import "SafariViewContoller.h"
+#import "SignUpViewController.h"
 
 
 @interface ChoiceViewController ()<SFSafariViewControllerDelegate>
