@@ -11,12 +11,17 @@
 @interface ViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *signUp;
 @property (weak, nonatomic) IBOutlet UIButton *login;
 
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerOne;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerTwo;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerThree;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerFour;
 
-- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField;
+@property(strong, nonatomic)NSArray *pickerNumbersArray;
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)emailTextField;
 
 @end
 

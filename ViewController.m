@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import "ChoiceViewController.h"
-#define NUMBERS_ONLY @"1234567890"
-#define CHARACTER_LIMIT 4
 
-@interface ViewController ()<UITextFieldDelegate>
+
+
+
+
+@interface ViewController ()<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end
 
@@ -19,14 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+   _pickerNumbersArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0"]; 
 
 }
 - (IBAction)loginButton:(id)sender {
     
-    if ([_emailTextField.text isEqualToString:@""] || [_passwordTextField.text isEqualToString:@""]) {
+    if ([_emailTextField.text isEqualToString:@""]) /*|| [_passwordTextField.text isEqualToString:@""])*/ {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"You must fill all required fields" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"You must fill all required fields. If you do not have an account please select 'Sign Up'" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"OK!" style:UIAlertActionStyleDestructive handler:nil]];
         {
             [self login];
@@ -39,22 +41,74 @@
     
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField
+- (BOOL)textFieldShouldReturn:(UITextField *)emailTextField
     {
     
-    self.passwordTextField.delegate = self;
-    [passwordTextField resignFirstResponder];
+    self.emailTextField.delegate = self;
+    [emailTextField resignFirstResponder];
       
     return YES;
 }
 
-- (BOOL)textField:(UITextField *)passwordTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string  {
-
-    NSUInteger newLength = [passwordTextField.text length] + [string length] - range.length;
-    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS_ONLY] invertedSet];
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-    return (([string isEqualToString:filtered])&&(newLength <= CHARACTER_LIMIT));
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    if ([pickerView isEqual:_pickerOne]) {
+        return 1;
+        
+    } if ([pickerView isEqual:_pickerTwo]) {
+        return 1;
+        
+    } if ([pickerView isEqual:_pickerThree]) {
+        return 1;
+        
+    } if ([pickerView isEqual:_pickerFour]) {
+        return 1;
+        
+    }
+    return 1;
 }
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    if ([pickerView isEqual:_pickerOne]) {
+        return _pickerNumbersArray.count;
+        
+    } if ([pickerView isEqual:_pickerTwo]) {
+        return _pickerNumbersArray.count;
+        
+    } if ([pickerView isEqual:_pickerThree]) {
+        return _pickerNumbersArray.count;
+        
+    } if ([pickerView isEqual:_pickerFour]) {
+        return _pickerNumbersArray.count;
+        
+    }
+    return _pickerNumbersArray.count;
+    
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    if ([pickerView isEqual:_pickerOne]) {
+        return _pickerNumbersArray[row];
+        
+    } if ([pickerView isEqual:_pickerTwo]) {
+        return _pickerNumbersArray[row];
+        
+    } if ([pickerView isEqual:_pickerThree]) {
+        return _pickerNumbersArray[row];
+        
+    } if ([pickerView isEqual:_pickerFour]) {
+        return _pickerNumbersArray[row];
+    }
+    return _pickerNumbersArray[row];
+    
+    
+}
+
+
+
+
 
 
 

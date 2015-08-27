@@ -10,11 +10,16 @@
 #import "ViewController.h"
 
 @interface SignUpViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *signupButton;
 
-- (BOOL)textFieldShouldReturn:(UITextField *)passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
+//Picker Password
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerOne;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerTwo;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerThree;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerFour;
+
+@property(strong, nonatomic)NSArray *pickerNumbersArray;
 
 
 
