@@ -105,13 +105,13 @@
  
     
 }
-
-
-
-
-
+- (IBAction)saveEmail:(id)sender {
+    NSString *emailSaveString = _emailTextField.text;
+    [[NSUserDefaults standardUserDefaults]setObject:emailSaveString forKey:@"emailSaveString"];
+    [[NSUserDefaults standardUserDefaults ]synchronize];
     
-
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

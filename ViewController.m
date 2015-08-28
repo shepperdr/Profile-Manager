@@ -10,9 +10,6 @@
 #import "ChoiceViewController.h"
 
 
-
-
-
 @interface ViewController ()<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end
@@ -21,8 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   _pickerNumbersArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0"]; 
+    
+    _pickerNumbersArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0"];
 
+        
 }
 - (IBAction)loginButton:(id)sender {
     
@@ -49,6 +48,8 @@
       
     return YES;
 }
+
+
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     
@@ -107,6 +108,18 @@
 }
 
 
+    
+    
+
+- (IBAction)loadEmail:(SignUpViewController *)sender {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *emailLoadString = [defaults objectForKey:@"emailSaveString"];
+    [_emailTextField setText:emailLoadString];
+    
+    NSLog(@"Email Loaded");
+    
+}
 
 
 

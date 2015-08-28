@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SignUpViewController.h"
 @interface ViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerFour;
 
 @property(strong, nonatomic)NSArray *pickerNumbersArray;
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)emailTextField;
 
