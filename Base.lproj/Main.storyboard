@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MyProfilePage-->
@@ -165,9 +164,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-A6-zch">
-                                <rect key="frame" x="187" y="243" width="95" height="30"/>
+                                <rect key="frame" x="253" y="149" width="95" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="95" id="Sck-M4-ScR"/>
+                                    <constraint firstAttribute="width" constant="95" id="UUN-IE-FTf"/>
                                 </constraints>
                                 <state key="normal" title="FBProfile 1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,7 +177,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-9S-wWz">
-                                <rect key="frame" x="187" y="327" width="95" height="30"/>
+                                <rect key="frame" x="253" y="285" width="95" height="30"/>
                                 <state key="normal" title="TProfile 1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,10 +187,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-uL-pUV">
-                                <rect key="frame" x="319" y="243" width="95" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="95" id="hrq-Ay-E5g"/>
-                                </constraints>
+                                <rect key="frame" x="253" y="219" width="95" height="30"/>
                                 <state key="normal" title="Yahoo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,7 +197,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-qK-1HO">
-                                <rect key="frame" x="319" y="327" width="95" height="30"/>
+                                <rect key="frame" x="253" y="340" width="95" height="30"/>
                                 <state key="normal" title="TProfile 2 ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -213,17 +209,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.34226707268174117" green="0.54511094637385971" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="U5e-uL-pUV" firstAttribute="trailing" secondItem="p5h-qK-1HO" secondAttribute="trailing" id="16k-Fc-i47"/>
-                            <constraint firstItem="bfe-9S-wWz" firstAttribute="top" secondItem="Yte-A6-zch" secondAttribute="bottom" constant="54" id="1r3-hE-5u2"/>
-                            <constraint firstItem="U5e-uL-pUV" firstAttribute="leading" secondItem="Yte-A6-zch" secondAttribute="trailing" constant="37" id="8VA-9d-vao"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yte-A6-zch" secondAttribute="trailing" constant="298" id="Bm9-av-qgx"/>
-                            <constraint firstItem="Yte-A6-zch" firstAttribute="leading" secondItem="bfe-9S-wWz" secondAttribute="leading" id="Ckb-Bw-VC6"/>
-                            <constraint firstItem="Yte-A6-zch" firstAttribute="leading" secondItem="7X0-M8-OkW" secondAttribute="leading" constant="187" id="Dox-dj-Gpa"/>
-                            <constraint firstItem="Yte-A6-zch" firstAttribute="top" secondItem="rWP-Kj-UU9" secondAttribute="bottom" constant="179" id="Jfa-fv-dmj"/>
-                            <constraint firstItem="Yte-A6-zch" firstAttribute="trailing" secondItem="bfe-9S-wWz" secondAttribute="trailing" id="ZJ4-9R-sac"/>
-                            <constraint firstItem="p5h-qK-1HO" firstAttribute="leading" secondItem="U5e-uL-pUV" secondAttribute="leading" id="b3p-lo-1yE"/>
-                            <constraint firstItem="Yte-A6-zch" firstAttribute="baseline" secondItem="U5e-uL-pUV" secondAttribute="baseline" id="bUx-Er-2h3"/>
-                            <constraint firstItem="bfe-9S-wWz" firstAttribute="baseline" secondItem="p5h-qK-1HO" secondAttribute="baseline" id="csm-ZI-3mj"/>
+                            <constraint firstItem="bfe-9S-wWz" firstAttribute="centerY" secondItem="7X0-M8-OkW" secondAttribute="centerY" id="Cd6-ac-Fcn"/>
+                            <constraint firstItem="Yte-A6-zch" firstAttribute="centerX" secondItem="7X0-M8-OkW" secondAttribute="centerX" id="D9l-Gf-KVR"/>
+                            <constraint firstItem="p5h-qK-1HO" firstAttribute="trailing" secondItem="bfe-9S-wWz" secondAttribute="trailing" id="DFT-Oj-lhD"/>
+                            <constraint firstItem="bfe-9S-wWz" firstAttribute="trailing" secondItem="U5e-uL-pUV" secondAttribute="trailing" id="EHG-gb-B3U"/>
+                            <constraint firstItem="U5e-uL-pUV" firstAttribute="top" secondItem="Yte-A6-zch" secondAttribute="bottom" constant="40" id="NJf-Ad-od4"/>
+                            <constraint firstItem="bfe-9S-wWz" firstAttribute="top" secondItem="U5e-uL-pUV" secondAttribute="bottom" constant="36" id="Qj9-op-M8r"/>
+                            <constraint firstItem="U5e-uL-pUV" firstAttribute="leading" secondItem="Yte-A6-zch" secondAttribute="leading" id="S43-IL-Ofm"/>
+                            <constraint firstItem="bfe-9S-wWz" firstAttribute="leading" secondItem="U5e-uL-pUV" secondAttribute="leading" id="Ud6-WO-YdA"/>
+                            <constraint firstItem="p5h-qK-1HO" firstAttribute="leading" secondItem="bfe-9S-wWz" secondAttribute="leading" id="e9W-KY-VUc"/>
+                            <constraint firstItem="p5h-qK-1HO" firstAttribute="top" secondItem="bfe-9S-wWz" secondAttribute="bottom" constant="25" id="gFX-pB-ZNz"/>
+                            <constraint firstItem="U5e-uL-pUV" firstAttribute="trailing" secondItem="Yte-A6-zch" secondAttribute="trailing" id="pUZ-bx-OAY"/>
                         </constraints>
                     </view>
                 </viewController>
