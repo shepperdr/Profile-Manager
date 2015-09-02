@@ -39,7 +39,7 @@
     }
 - (IBAction)fbTwo:(id)sender {
     
-    NSURL *url = [NSURL URLWithString:@"https://www.yahoo.com"];
+    NSURL *url = [NSURL URLWithString:@"http://football.fantasysports.yahoo.com"];
     SafariViewContoller *svc = [[SafariViewContoller alloc]initWithURL:url];
     [self presentViewController:svc animated:YES completion:nil];
     svc.delegate = self;
@@ -57,7 +57,7 @@
 
 - (IBAction)twitterTwo:(id)sender {
     
-    NSURL *url = [NSURL URLWithString:@"https://www.nfl.com"];
+    NSURL *url = [NSURL URLWithString:@"http://fantasy.nfl.com"];
     SafariViewContoller *svc = [[SafariViewContoller alloc]initWithURL:url];
     [self presentViewController:svc animated:YES completion:nil];
     svc.delegate = self;

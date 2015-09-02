@@ -9,20 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
-@interface SignUpViewController : UIViewController<UITextFieldDelegate>
-
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UIButton *signupButton;
-//Picker Password
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerOne;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerTwo;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerThree;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerFour;
-
-@property(strong, nonatomic)NSArray *pickerNumbersArray;
-
-//- (IBAction)saveEmail:(id)sender;
-
-
+@interface SignUpViewController : UIViewController
 
 @end
